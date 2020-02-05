@@ -1,4 +1,6 @@
-// Exercise 1
+// Exercise 1 - Hello Part 1
+//Write a function hello which given a name, says hello to the name. 
+//Use the following template:
 
 const myName = "Jon"
 
@@ -8,7 +10,11 @@ function greeting(name){
 
 greeting(myName);
 
-// Exercose 2
+// Exercise 2 - Hello Part 2
+//Modify your hello program such that if no name is given: hello(), 
+//it will print "Hello, world!", otherwise it behaves the same as previously.
+
+
 var name = prompt("GIMME YOUR NAME")
 
 
@@ -22,7 +28,13 @@ function greeting(x) {
 
 greeting(name);
 
-// Exercise 3
+// Exercise 3 - Madlib
+//Write a madlib function, which is given a name and a subject.
+//It will return(not print) a new string: (name)'s favorite subject 
+//in school is (subject).
+
+
+
 var uno = prompt("Name");
 var dos = prompt("Favorite subject")
 
@@ -34,7 +46,12 @@ function madlib (x,y) {
 
 madlib(uno,dos)
 
-// Exercise 4
+// Exercise 4 - Tip Calculator
+//Write a function tipAmount that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
+
+//good -> 20%
+//fair -> 15%
+//bad -> 10%
 
 let dollar = prompt("dollar");
 let service = prompt("good, fair or bad?");
@@ -73,11 +90,9 @@ function tipAmount (x,y) {
 
 console.log(tipAmount(dollar,service));
 
-
-
-
 tipAmount(dollar,service)
 
+//Example switch/case usage
 // switch(service) {
 // 	case "good":
 // 	console.log("service was good");
@@ -93,7 +108,11 @@ tipAmount(dollar,service)
 // 	break
 
 
-// Exercise 5
+// Exercise 5 - Tip Calculator 2
+//Write a function totalAmount that takes the same arguments 
+//as tipAmount except it returns the total as the tip amount plus 
+//the bill amount. This function may make use of tipAmount as a sub-task.
+
 
 let dollar = Number(prompt("dollar"));
 let service = prompt("good, fair or bad?");
@@ -116,7 +135,11 @@ console.log(totalAmount);
 
 
 
-// Exercise 6
+// Exercise 6 - Tip Calculator 3
+//Write a function splitAmount that takes the bill amount 
+//and the level of service, and the number of people to split
+// the bill between. It will return the final amount for each person.
+
 
 let dollar = Number(prompt("dollar"));
 let service = prompt("good, fair or bad?");
