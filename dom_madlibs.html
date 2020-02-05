@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Lorem Madlibs</title>
+	<!-- Samuel L. Jackson -->
+
+<style>
+
+/*html {
+	background-image: url(https://cdn.quotesgram.com/img/23/7/1745041498-samuel_20l_20jackson_20funny_20or_20die_20_300.jpg);
+}*/
+
+
+h1 {
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+}
+
+p {
+	display:flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin:auto 35% auto 35%;
+	min-width: 0%;
+	min-height: 100%;
+
+
+
+}
+
+span #noun1, #noun2, #noun3{
+	color:purple;
+	font-weight:bolder;
+	border:2px solid red;
+}
+
+input {
+	border: 1px solid black;
+}
+
+label, button{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1.5% auto auto auto;
+}
+
+button {
+	color:red;
+	border: 1px dotted black;
+	border-radius: 10px;
+	font-size: 20px;
+	background-color:orange;
+	font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- start slipsum code -->
+<!-- &nbsp; === nonBreakingSpace -->
+
+
+<h1>I can do that</h1>
+<p>My money's in that office, right? If she start giving me some drama about it ain't there, and we got to go someplace else and get it, I'm gonna bop you in the head then and there.<p>
+
+Then I'm gonna boop that person in the kneecaps, find out where my filthy <span><span id = "noun1">money</span> is.</span> She gonna tell me too. Hey, look at me when I'm talking to you, You listen: we go in there, and that hooligan Winston or anybody else is in there, you the first person to get shot. You understand? </p>
+
+<h1><span>No man, I don't eat <span id = "noun2">pork</span></span></h1>
+<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? <span>Because of the kids. They called me Mr. <span id = "noun3">Glass</span></span>.</p>
+
+<h1>Hold on to your burrito</h1>
+<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+
+<h1>No, sunshine</h1>
+<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little dog with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
+
+<!-- end slipsum code -->
+
+	<form>
+		<label>Change Noun 1
+			<input type="text" id = "nounConv1" value="">
+		</label>
+		<!-- break -->
+		<label>Change Noun 2
+			<input type="text" id = "nounConv2" value="">
+		</label>
+		<!-- break -->
+		<label>Change Noun 3
+			<input type="text" id = "nounConv3" value="">
+		</label>
+
+		<button type = "button" id = "button">TRANSFORM!</button>
+	</form>
+
+</body>
+
+<script>
+ 
+//Input fields //
+const inputNoun1 = document.getElementById("nounConv1");
+const inputNoun2 = document.getElementById("nounConv2");
+const inputNoun3 = document.getElementById("nounConv3");
+
+// Button //
+const transform = document.getElementById("button");
+
+
+//Targetted text //
+const newNoun1 = document.getElementById("noun1");
+const newNoun2 = document.getElementById("noun2");
+const newNoun3 = document.getElementById("noun3");
+
+
+//Syntax = target.addEventListener(type, listener/ie.function(x)) 
+transform.addEventListener("click",function(x){
+	newNoun1.innerHTML = (`${inputNoun1.value}`);
+	newNoun2.innerHTML = (`${inputNoun2.value}`);
+	newNoun3.innerHTML = (`${inputNoun3.value}`);
+})
+
+</script>
+
+
+</html>
