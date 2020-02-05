@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>DOM Starter Kit</title>
+</head>
+<body>
+
+	<p id = "helloWorld">Hello World!</p>
+		<form>
+			<label>Your Name
+				<input type="text" id="userInput" value=""/>
+			</label>
+		<button type="button" id="clickMe">Click Me!<button>
+		</form>
+
+</body>
+
+<script>
+
+	const myButton = document.getElementById("clickMe");
+	const myText = document.getElementById("helloWorld");
+	const myInput = document.getElementById('userInput');
+
+	myButton.addEventListener("click", function(e){
+		e.preventDefault();
+		console.log("event",e)
+		console.log("Clicked")
+		myText.innerHTML = (`Hello ${myInput.value}`);
+	});
+
+
+</script>
+
+
+</html>

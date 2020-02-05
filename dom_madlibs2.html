@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Lorem Madlibs</title>
+	<!-- Samuel L. Jackson -->
+
+<style>
+
+/*html {
+	background-image: url(https://cdn.quotesgram.com/img/23/7/1745041498-samuel_20l_20jackson_20funny_20or_20die_20_300.jpg);
+}*/
+
+
+h1 {
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+}
+
+p {
+	display:flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin:auto 35% auto 35%;
+
+
+
+
+}
+
+p.theNoun, h1.theNoun{
+	color:purple;
+	font-weight:bolder;
+}
+
+input {
+	border: 1px solid black;
+}
+
+label, button{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1.5% auto auto auto;
+}
+
+button {
+	color:red;
+	border: 1px dotted black;
+	border-radius: 10px;
+	font-size: 20px;
+	background-color:orange;
+	font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- start slipsum code -->
+
+
+<h1>I can do that</h1>
+<p>My money's in that office, right? If she start giving me some drama about it ain't there, and we got to go someplace else and get it, I'm gonna bop you in the head then and there.</p>
+
+<p>Then I'm gonna boop that person in the kneecaps, find out where my filthy money is She gonna tell me too. Hey, look at me when I'm talking to you, You listen: we go in there, and that hooligan Winston or anybody else is in there, you the first person to get shot. You understand? </p>
+
+<h1>No man, I don't eat <h1 class = "theNoun">pork</h1></h1>
+<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr. <p class = "theNoun">Glass<p></p>
+
+<h1>Hold on to your burrito</h1>
+<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+
+<!-- end slipsum code -->
+
+	<form>
+		<label>Noun Field 1
+			<input type="text" class = "nounInput" value="">
+		</label>
+
+		<label>Noun Field 2
+			<input type="text" class = "nounInput" value="">
+		</label>
+
+		<label>Noun Field 3
+			<input type="text" class = "nounInput" value="">
+		</label>
+
+		<button type = "button" id = "theButton">TRANSFORM!</button>
+	</form>
+
+</body>
+
+<script>
+ 
+
+//[Init variables]//
+
+
+//Targetted Text//
+const alltheNouns = document.querySelectorAll(".theNoun");
+
+//Input fields //
+const alltheNounsInput = document.querySelectorAll(".nounInput");
+
+// Button //
+const transform = document.querySelector("#theButton");
+
+
+//Gets User inputs and adds them to an array
+//this will be linked within a button
+function grabUserInputs(listOfNounInputs){
+	const arrObj = [];
+	listOfNounInputs.forEach(function(dasInput){
+		arrObj.push(dasInput.value);
+	});
+	return arrObj;
+}
+
+//Button init and linking
+//Syntax = target.addEventListener(type, listener/ie.function(x)) 
+transform.addEventListener("click",function(event){
+	event.preventDefault();
+	const arrConvertFromInput = grabUserInputs(alltheNounsInput);
+	//COMBINED HERE
+
+	alltheNouns.forEach(function(noun, index){
+		noun.innerHTML = arrConvertFromInput[index];
+	});
+})
+
+
+</script>
+
+
+</html>
+
+
+
+	
+}) -->
